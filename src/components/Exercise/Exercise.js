@@ -6,10 +6,12 @@ const Exercise = (props) => {
     return (
         <div className='exercise'>
             <img className='exercise-img' src={img} alt="" />
-            <p>Name: {name}</p>
-            <p>Time required: {time}</p>
+            <div className="exercise-content">
+                <p>Name: {name}</p>
+                <p>Time required: {time}</p>
+            </div>
             <button className='btn-exercise'>
-                <p >Add to list</p>
+                <p className='btn-text'>Add to list</p>
             </button>
         </div>
     );

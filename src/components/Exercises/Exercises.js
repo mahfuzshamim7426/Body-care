@@ -10,7 +10,7 @@ const Exercises = () => {
     }, [])
     return (
         <div>
-            <h2>Select today’s exercise</h2>
+            <h3>Select today’s exercise</h3>
 
             <div className="exercise-container">
                 {

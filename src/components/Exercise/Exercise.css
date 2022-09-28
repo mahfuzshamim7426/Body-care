@@ -1,23 +1,35 @@
 .exercise {
     width: 280px;
     height: 350px;
-    border: 1px solid #95A0A7;
+    border-radius: 10px;
     position: relative;
+    background-color: #fff;
 }
 
 
 .exercise-img {
     height: 130px;
-    width: 250px;
+    width: 253px;
     border-radius: 10px;
-    margin: 7px;
+    margin: 15px;
+}
+
+.exercise-content {
+    margin-left: 15px;
+    font-size: 18px;
 }
 
 .btn-exercise {
-    width: 100%;
-    background-color: #FFE0B3;
+    background-color: #000000e5;
     border: none;
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 8px;
     position: absolute;
     bottom: 0;
+    margin: 10px;
+    padding: 4px 100px;
+}
+
+.btn-text {
+    color: white;
+    font-size: 13px;
 }

@@ -9,7 +9,6 @@ function App() {
       <div className='content-container'>
         <Header></Header>
         <Exercises></Exercises>
-        <h1>Here is body section</h1>
       </div>
       <div>
         <h2>Cart section</h2>
