@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../../images/logo.png';
 import Blog from '../Blogs/Blog';
 import Exercise from '../Exercise/Exercise';
 import Header from '../Header/Header';
