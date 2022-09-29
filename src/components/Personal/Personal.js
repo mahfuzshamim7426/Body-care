@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../../images/person.jpg'
 import './Personal.css'
+import { toast } from 'react-toastify';
 
 const Personal = (props) => {
     const { cartTime } = props;
-    console.log('cartTime from Personal', cartTime)
+    const [brekTime, setBreakTime] = useState(0)
+
+    const handleBreakTime = (time) => {
+        setBreakTime(time);
+    };
+    const notify = () => toast("Mission Completed");
+
     return (
         <div className='personal-cart-info'>
             <div className='person-info'>
@@ -40,10 +47,10 @@ const Personal = (props) => {
             <div>
                 <h3>Add A Break</h3>
                 <div className='break-time-container'>
-                    <button className='break-time'>10s</button>
-                    <button className='break-time'>20s</button>
-                    <button className='break-time'>30s</button>
-                    <button className='break-time'>40s</button>
+                    <button className='break-time' onClick={() => { handleBreakTime(10) }}>10s</button>
+                    <button className='break-time' onClick={() => { handleBreakTime(20) }}>20s</button>
+                    <button className='break-time' onClick={() => { handleBreakTime(30) }}>30s</button>
+                    <button className='break-time' onClick={() => { handleBreakTime(40) }}>40s</button>
 
                 </div>
             </div>
@@ -55,11 +62,13 @@ const Personal = (props) => {
             </div>
             <div>
                 <div className='exercise-time-container'>
-                    <p>Break time: { }seconds</p>
+                    <p>Break time: {brekTime}seconds</p>
                 </div>
             </div>
             <div >
-                <button className="activity-completed-button">
+                <button className="activity-completed-button"
+                    onClick={notify}
+                >
                     <p className='activity-btn-txt'>Activity Completed</p>
                 </button>
             </div>
