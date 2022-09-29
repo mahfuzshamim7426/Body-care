@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import logo from '../../images/logo.png';
 import Blog from '../Blogs/Blog';
 import Exercise from '../Exercise/Exercise';
+import Header from '../Header/Header';
 import Personal from '../Personal/Personal';
 import './Exercises.css'
 
@@ -23,10 +24,7 @@ const Exercises = () => {
     return (
         <div className="App-body">
             <div className='exercise-body-container'>
-                <div className='header-content'>
-                    <img className='logo' src={logo} alt="" />
-                    <h3 className='header-text'>Body Care</h3>
-                </div>
+                <Header></Header>
                 <h3>Select today&apos;s exercise</h3>
 
                 <div className="exercise-container">
