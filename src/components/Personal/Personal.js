@@ -3,11 +3,8 @@ import logo from '../../images/person.jpg'
 import './Personal.css'
 
 const Personal = (props) => {
-    const { cart } = props;
-    let total = 0;
-    // for (const exercise of cart) {
-    //     total = total + exercise.time;
-    // }
+    const { cartTime } = props;
+    console.log('cartTime from Personal', cartTime)
     return (
         <div className='personal-cart-info'>
             <div className='person-info'>
@@ -52,7 +49,7 @@ const Personal = (props) => {
             <div>
                 <h3>Exercise Details</h3>
                 <div className='exercise-time-container'>
-                    <p>Exercise time:{total} seconds</p>
+                    <p>Exercise time: {cartTime} seconds</p>
                 </div>
             </div>
             <div>
