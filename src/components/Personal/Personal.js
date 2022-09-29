@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../../images/person.jpg'
 import './Personal.css'
 import { toast } from 'react-toastify';
@@ -8,8 +8,13 @@ const Personal = (props) => {
     const [brekTime, setBreakTime] = useState(0)
 
     const handleBreakTime = (time) => {
+        localStorage.setItem("break", time);
         setBreakTime(time);
     };
+    useEffect(() => {
+        setBreakTime(localStorage.getItem("break"));
+    }, [])
+
     const notify = () => toast("Mission Completed");
 
     return (
@@ -57,12 +62,12 @@ const Personal = (props) => {
             <div>
                 <h3>Exercise Details</h3>
                 <div className='exercise-time-container'>
-                    <p>Exercise time: {cartTime} seconds</p>
+                    <p>Exercise time: {cartTime} Seconds</p>
                 </div>
             </div>
             <div>
                 <div className='exercise-time-container'>
-                    <p>Break time: {brekTime}seconds</p>
+                    <p>Break time: {brekTime} Seconds</p>
                 </div>
             </div>
             <div >
