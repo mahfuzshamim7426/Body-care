@@ -8,7 +8,6 @@
 
 .person-info {
     display: flex;
-    justify-content: center;
     align-items: center;
     margin-top: 20px;
 }
@@ -46,6 +45,7 @@
     background-color: rgb(245, 245, 245);
     padding: 7px;
     border-radius: 10px;
+    align-items: center;
 
 }
 
@@ -93,4 +93,16 @@
 .activity-btn-txt {
     text-align: center;
     color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .personal-information {
+        width: 250px;
+        height: 78px;
+    }
+
+    .personal-cart-info {
+        width: 320px;
+        margin-right: 0;
+    }
 }

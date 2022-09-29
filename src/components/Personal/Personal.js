@@ -40,10 +40,11 @@ const Personal = (props) => {
             <div>
                 <h3>Add A Break</h3>
                 <div className='break-time-container'>
-                    <p className='break-time'><small className='break-time-count'>10s</small> </p>
-                    <p className='break-time'><small>20</small>s </p>
-                    <p className='break-time'><small>30</small>s </p>
-                    <p className='break-time'><small>40</small>s </p>
+                    <button className='break-time'>10s</button>
+                    <button className='break-time'>20s</button>
+                    <button className='break-time'>30s</button>
+                    <button className='break-time'>40s</button>
+
                 </div>
             </div>
             <div>
